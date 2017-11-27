@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Donation amount:</strong>
+  <%= @reward.donation_amount %>
+</p>
+
+<p>
+  <strong>Gift:</strong>
+  <%= @reward.gift %>
+</p>
+
+<p>
+  <strong>User limit:</strong>
+  <%= @reward.user_limit %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @reward.project %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reward.user %>
+</p>
+
+<%= link_to 'Edit', edit_reward_path(@reward) %> |
+<%= link_to 'Back', rewards_path %>
