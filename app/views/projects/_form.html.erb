@@ -22,6 +22,12 @@
   </div>
 
   <div class="field">
+    <%= form.label :category %>
+    <%# <%= form.select :category, id: :project_category %> 
+    <%= form.select :project_categories, Category.all.collect { |p| [ p.title] }, include_blank: false%>
+  </div>
+
+  <div class="field">
     <%= form.label :funding_goal %>
     <%= form.text_field :funding_goal, id: :project_funding_goal %>
   </div>
@@ -51,10 +57,12 @@
     <%= form.text_field :about, id: :project_about %>
   </div>
 
+<% if false %>
   <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :project_user_id %>
   </div>
+<% end %>
 
   <div class="actions">
     <%= form.submit %>
